@@ -42,6 +42,16 @@ angular.module('productApp',
         controller: 'list'        
       }
     }
+  })
+
+  .state('app.product', {
+    url: "/product/:id/find",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/product/product.html",
+        controller: 'product'        
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/list');
